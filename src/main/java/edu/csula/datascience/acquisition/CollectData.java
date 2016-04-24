@@ -1,9 +1,5 @@
 package edu.csula.datascience.acquisition;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.Collection;
 
@@ -31,10 +27,10 @@ public class CollectData {
 					e.printStackTrace();
 				}
 		}
-		
+		amazonCollector amazoncollector = new amazonCollector();
 			try {
-				Collection<amazonClass> amazonData = collector.mungee();
-				collector.save(amazonData);
+				Collection<amazonClass> amazonData = amazoncollector.mungee();
+				amazoncollector.save(amazonData);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
