@@ -1,6 +1,7 @@
 package edu.csula.datascience.acquisition;
 
 import java.util.Collection;
+import java.util.List;
 
 /**
  * Interface to define collector behavior
@@ -11,4 +12,6 @@ public interface Collector<T, N> {
     Collection<T> download(Source<N> src);
 
     boolean save(Collection<T> data);
+
+	Collection<SimpleModel> mungee(Collection<MockData> src);
 }

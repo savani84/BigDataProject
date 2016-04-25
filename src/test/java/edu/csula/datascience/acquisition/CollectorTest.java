@@ -5,9 +5,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Collection;
-import java.util.List;
-
-import static org.junit.Assert.*;
 
 /**
  * A test case to show how to use Collector and Source
@@ -23,19 +20,10 @@ public class CollectorTest {
     }
 
     @Test
-    public void download() throws Exception {
-        List<SimpleModel> list = (List<SimpleModel>) collector.download(source);
-
-        Assert.assertEquals(list.size(), 3);
-
-        for (int i = 0; i < 3; i ++) {
-            Assert.assertEquals(list.get(i).getId(), "" + (i + 1));
-            Assert.assertEquals(list.get(i).getContent(), "content" + (i + 1));
-        }
-    }
-
-    @Test
-    public void save() throws Exception {
-        Assert.assertTrue(collector.save(collector.download(source)));
+    public void mungee() throws Exception {
+        Collection<MockData> list = source.provide();
+        Collection<SimpleModel> expectedList = collector.mungee(list);
+   
+        Assert.assertTrue(list.size() > expectedList.size());
     }
 }

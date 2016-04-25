@@ -197,6 +197,16 @@ public class TwitterCollector {
 	                  append("tweetsource", s.getSource()).
 	                  append("tweettext", cleanText(s.getText()));
 				
+				/*bw.write("moviename~" +  moviename + "`datasource~TWITTER`location~" + s.getUser().getLocation() +
+				"`username~" + s.getUser().getScreenName() + "`usercreation~" + s.getUser().getCreatedAt() +
+				"`userdesc~" + s.getUser().getDescription() + "`userfav~" + s.getUser().getFavouritesCount() +
+				"`userfollow~" + s.getUser().getFollowersCount() + "`userfrnd~" + s.getUser().getFriendsCount() +
+				"`userlang~" + s.getUser().getLang() + "`usertimezone~" + s.getUser().getTimeZone() +
+				"`userstatus~" + s.getUser().getStatus() + "`createAt~" + s.getUser().getCreatedAt() +
+				"`UserRetweet~" + s.getCurrentUserRetweetId() + "`favcount~" + s.getFavoriteCount() +
+				"`lang~" + s.getLang() + "`retweetcount~" + s.getRetweetCount() +
+				"`tweetsource~" + s.getSource() + "`tweettext~" + cleanText(s.getText()) );
+				bw.newLine();*/
 				bw.write(doc.toString());
 				collection.insertOne(doc);
 			}
