@@ -22,7 +22,7 @@ public class CollectorTest {
     @Test
     public void mungee() throws Exception {
         Collection<MockData> list = source.provide();
-        Collection<SimpleModel> expectedList = collector.mungee(list);
+        Collection<SimpleModel> expectedList = ((MockCollector) collector).mungee(list);
    
         Assert.assertTrue(list.size() > expectedList.size());
     }

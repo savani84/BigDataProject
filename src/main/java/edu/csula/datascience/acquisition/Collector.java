@@ -12,6 +12,4 @@ public interface Collector<T, N> {
     Collection<T> download(Source<N> src);
 
     boolean save(Collection<T> data);
-
-	Collection<SimpleModel> mungee(Collection<MockData> src);
 }
