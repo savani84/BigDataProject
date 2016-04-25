@@ -4,25 +4,25 @@ package edu.csula.datascience.acquisition;
  * Mock raw data
  */
 public class MockData {
-    private final String moviename;
-    private final String datasource;
-    private final String location;
-    private final String username;
-    private final String usercreation;
-    private final String userdesc;
-    private final String userfav;
-    private final String userfollow;
-    private final String userfrnd;
-    private final String userlang;
-    private final String usertimezone;
-    private final String userstatus;
-    private final String createAt;
-    private final String userRetweet;
-    private final String favcount;
-    private final String lang;
-    private final String retweetcount;
-    private final String tweetsource;
-    private final String tweettext;
+	private String moviename = "";
+    private String datasource = "";
+    private String location = "";
+    private String username = "";
+    private String usercreation = "";
+    private String userdesc = "";
+    private String userfav = "";
+    private String userfollow = "";
+    private String userfrnd = "";
+    private String userlang = "";
+    private String usertimezone = "";
+    private String userstatus = "";
+    private String createAt = "";
+    private String userRetweet = "";
+    private String favcount = "";
+    private String lang = "";
+    private String retweetcount = "";
+    private String tweetsource = "";
+    private String tweettext = "";
 
     public MockData(String moviename, String datasource, String location,
 			String username, String usercreation, String userdesc,
